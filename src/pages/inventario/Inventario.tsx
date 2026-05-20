@@ -68,7 +68,7 @@ export default function Inventario() {
     }
 
     try {
-      const stored = localStorage.getItem('glasse-cart')
+      const stored = localStorage.getItem('flowy-cart')
       let cart: CartItem[] = stored ? JSON.parse(stored) : []
       const index = cart.findIndex(c => c.variante_id === item.variante_id)
 
@@ -78,7 +78,7 @@ export default function Inventario() {
         cart.push(item)
       }
 
-      localStorage.setItem('glasse-cart', JSON.stringify(cart))
+      localStorage.setItem('flowy-cart', JSON.stringify(cart))
       // Disparar evento para actualizar Layout
       window.dispatchEvent(new Event('cart-updated'))
       

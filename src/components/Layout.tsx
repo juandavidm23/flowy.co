@@ -49,7 +49,7 @@ const IcoTruck = () => (
 
 export default function Layout() {
   const [activeTheme, setActiveTheme] = useState(() => {
-    return localStorage.getItem('glasse-theme') || 'pink'
+    return localStorage.getItem('flowy-theme') || 'pink'
   })
   const [userEmail, setUserEmail] = useState('')
   const [cartSize, setCartSize] = useState(0)
@@ -91,7 +91,7 @@ export default function Layout() {
     // Escuchar el tamaño del carrito
     const updateCartSize = () => {
       try {
-        const stored = localStorage.getItem('glasse-cart')
+        const stored = localStorage.getItem('flowy-cart')
         if (stored) {
           const parsed = JSON.parse(stored)
           const total = parsed.reduce((sum: number, item: any) => sum + item.cantidad, 0)
@@ -110,7 +110,7 @@ export default function Layout() {
     const interval = setInterval(updateCartSize, 1000)
 
     const handleStorage = (e: StorageEvent) => {
-      if (e.key === 'glasse-theme' && e.newValue) {
+      if (e.key === 'flowy-theme' && e.newValue) {
         setActiveTheme(e.newValue)
         document.body.className = `theme-${e.newValue}`
       }
@@ -127,12 +127,12 @@ export default function Layout() {
 
   const changeTheme = (theme: string) => {
     setActiveTheme(theme)
-    localStorage.setItem('glasse-theme', theme)
+    localStorage.setItem('flowy-theme', theme)
     document.body.className = `theme-${theme}`
   }
 
   const handleLogout = () => {
-    if (confirm('¿Cerrar sesión en GLASSE.co?')) {
+    if (confirm('¿Cerrar sesión en Flowy?')) {
       supabase.auth.signOut()
     }
   }
@@ -156,7 +156,7 @@ export default function Layout() {
       <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-logo" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
-            <div className="logo-main">GLASSE.co</div>
+            <img src="/logo.png" alt="Flowy" style={{ height: 44, marginBottom: 8, filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.2))' }} />
             <div className="logo-sub" style={{ textTransform: 'uppercase', letterSpacing: '1px', fontSize: '9px', opacity: 0.6 }}>Sistema - v0.3</div>
           </div>
           {/* Botón para cerrar sidebar visible únicamente en móvil */}
@@ -266,7 +266,7 @@ export default function Layout() {
               <line x1="3" y1="18" x2="21" y2="18"/>
             </svg>
           </button>
-          <span className="mob-logo">GLASSE.co</span>
+          <img src="/logo.png" alt="Flowy" style={{ height: 28 }} />
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>

@@ -34,7 +34,7 @@ export default function Login() {
               <path d="M3 14V10l3-6M21 14V10l-3-6M11 14h2"/>
             </svg>
           </div>
-          <h1 style={{ fontFamily: 'Syne, sans-serif', fontSize: 24, fontWeight: 900, background: 'linear-gradient(135deg, var(--text) 30%, rgba(var(--accent-rgb), 0.8) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', margin: '0 0 6px 0', textTransform: 'uppercase' }}>GLASSE.co</h1>
+          <img src="/logo.png" alt="Flowy" style={{ height: 60, marginBottom: 12, filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))' }} />
           <p style={{ margin: 0, fontSize: 13, color: 'var(--text-muted)' }}>Panel de Administración</p>
         </div>
 

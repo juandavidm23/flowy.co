@@ -302,7 +302,7 @@ export default function Dashboard() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {ventasRecientes.map((v, i) => {
                 const firstDetail = v.detalle_ventas?.[0]
-                const nombreProducto = firstDetail?.variantes?.productos?.nombre ?? 'Gafas GLASSE'
+                const nombreProducto = firstDetail?.variantes?.productos?.nombre ?? 'Gafas Flowy'
                 const colorProducto = firstDetail?.variantes?.color ? ` (${firstDetail.variantes.color})` : ''
                 const fotoProducto = firstDetail?.variantes?.foto_url
                 const sku = v.id.slice(0, 5).toUpperCase()

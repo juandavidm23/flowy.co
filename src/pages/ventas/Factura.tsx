@@ -119,13 +119,13 @@ export default function Factura({ ventaId, onClose }: Props) {
             {/* Header del Ticket */}
             <div style={{ textAlign: 'center', paddingBottom: '16px', borderBottom: '1px dashed #bbb', marginBottom: '16px' }}>
               <div style={{ fontFamily: 'Syne', fontSize: '32px', fontWeight: 900, letterSpacing: '-1.5px', color: '#0b0b14' }}>
-                GLASSE<span style={{ color: '#ff007f' }}>.co</span>
+                <img src="/logo.png" alt="Flowy" style={{ height: 32, marginBottom: 8 }} />
               </div>
               <div style={{ fontSize: '10px', color: '#666', letterSpacing: '1px', fontWeight: 700, marginTop: '4px', textTransform: 'uppercase' }}>
                 Gafas Y2K - Medellín, Colombia
               </div>
               <div style={{ fontSize: '9px', color: '#888', marginTop: '2px' }}>
-                NIT 1.025.xxx.xxx &middot; @glasse.co
+                NIT 1.025.xxx.xxx &middot; @flowy
               </div>
             </div>
 
@@ -226,10 +226,10 @@ export default function Factura({ ventaId, onClose }: Props) {
             {/* Nota de pie */}
             <div style={{ marginTop: '24px', paddingTop: '14px', borderTop: '1px dashed #bbb', textAlign: 'center' }}>
               <p style={{ fontSize: '9px', color: '#888', letterSpacing: '0.5px', textTransform: 'uppercase', lineHeight: '1.4', margin: 0 }}>
-                Gracias por comprar en GLASSE.co + devoluciones 8 días
+                Gracias por comprar en Flowy + devoluciones 8 días
               </p>
               <p style={{ fontSize: '9px', color: '#ff007f', fontWeight: 800, letterSpacing: '0.5px', textTransform: 'uppercase', marginTop: '4px', margin: 0 }}>
-                follow @glasse.co para nuevos drops
+                follow @flowy para nuevos drops
               </p>
             </div>
 

@@ -158,7 +158,7 @@ export default function ProductoForm({ onClose, onSuccess, hideInitialStock = fa
 
               <div className="input-group">
                 <label>Marca *</label>
-                <input value={marca} onChange={e => setMarca(e.target.value)} placeholder="ej. GLASSE" required />
+                <input value={marca} onChange={e => setMarca(e.target.value)} placeholder="ej. Flowy" required />
               </div>
 
               <div className="input-group">

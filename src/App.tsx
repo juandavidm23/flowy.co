@@ -23,7 +23,7 @@ export default function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('glasse-theme') || 'pink'
+    const savedTheme = localStorage.getItem('flowy-theme') || 'pink'
     document.body.className = `theme-${savedTheme}`
 
     // Obtener sesión inicial
